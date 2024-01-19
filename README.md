@@ -23,7 +23,7 @@ Este repositório contém a API de cadastro de afazeres e de usuários desenvolv
 - Arquitetura MVC, pois hexagonal com usecases ao meu ver seria adicionar complexidade desnecessária ao projeto e seria inviável tendo em vista o prazo.
 - Abstração das bibliotecas do projeto (Joi e Bcrypt) afim de evitar alto acoplamento e maiores complicações posteriormente caso a biblioteca seja descontinuada ou aja incompatibilidade de versões.
 - Princípios de desenvolvimento clean.
-- Há princípio iria dockerizar mas não consegui fazer o teste dentro do prazo.
+- A princípio iria dockerizar mas não consegui fazer o teste dentro do prazo.
 - Tinha intenção de fazer testes com Jest mas também não consegui implementar dentro do prazo.
 - Tratamento de erros
 
