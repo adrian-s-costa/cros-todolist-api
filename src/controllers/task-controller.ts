@@ -1,5 +1,5 @@
 import taskService from '../services/task-service'
-import { Request, Response } from 'express'
+import { Response } from 'express'
 import httpStatus from 'http-status'
 
 export async function create(req: any, res: Response) {
