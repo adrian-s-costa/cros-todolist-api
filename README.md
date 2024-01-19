@@ -25,6 +25,7 @@ Este repositório contém a API de cadastro de afazeres e de usuários desenvolv
 - Princípios de desenvolvimento clean.
 - Há princípio iria dockerizar mas não consegui fazer o teste dentro do prazo.
 - Tinha intenção de fazer testes com Jest mas também não consegui implementar dentro do prazo.
+- Tratamento de erros
 
 ## Rodando localmente
 1. Clone o repositório
