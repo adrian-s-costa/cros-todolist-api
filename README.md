@@ -35,18 +35,18 @@ Este repositório contém a API de cadastro de afazeres e de usuários desenvolv
 ```bash
 ~$ npm i
 ```
-4. Crie um aquivo `.env` na raíz do projeto e o configure de acordo com suas particularidades seguindo o padrão do `.env.example` para os nomes das variáveis de ambiente
+3. Crie um aquivo `.env` na raíz do projeto e o configure de acordo com suas particularidades seguindo o padrão do `.env.example` para os nomes das variáveis de ambiente
    
 ```bash
   PORT=porta_em_que_API_vai_rodar
   JWT_SECRET=qualquer_valor_serve
   DATABASE_URL="postgresql://user:password@host:port/dbName"
 ```
-5. Execute o comando `npx prisma migrate up` para rodar as migrações do banco
+4. Execute o comando `npx prisma migrate up` para rodar as migrações do banco
 ```bash
 ~$ npx prisma migrate up
 ```
-6. Execute o comando `npm run start`
+5. Execute o comando `npm run start`
 ```bash
 ~$ npm run start
 ```
