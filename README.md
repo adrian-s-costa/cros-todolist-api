@@ -20,7 +20,7 @@ Este repositório contém a API de cadastro de afazeres e de usuários desenvolv
 
 ## Documentação
 
-[Swagger Documentação](https://app.swaggerhub.com/apis/pinkglb/Cros-TodoList-API/1.0.0)
+[Swagger Documentação](https://app.swaggerhub.com/apis-docs/pinkglb/Cros-TodoList-API/1.0.0)
 
 ## Escolhas técnicas relevantes
 

@@ -5,7 +5,7 @@ import { notFoundError } from '../../errors'
 import { ApplicationError } from '../../protocols'
 
 export async function create(task: TaskCreate): Promise<Task> {
-  return await taskRepository.create(task)
+  return await taskRepository.create(task);
 }
 
 export async function getMany(
@@ -19,21 +19,21 @@ export async function getById(
   taskId: number,
   userId: number,
 ): Promise<Task | ApplicationError> {
-  const taskById = await taskRepository.getById(taskId, userId)
-  if (!taskById) throw notFoundError('Task could not be found')
-  return taskById
+  const taskById = await taskRepository.getById(taskId, userId);
+  if (!taskById) throw notFoundError('Task could not be found');
+  return taskById;
 }
 
 export async function update(taskId: number, userId: number, task: TaskUpdate) {
   const updatedTask = await taskRepository.update(taskId, task, userId)
   if (!updatedTask) throw notFoundError('Task could not be found')
-  return updatedTask
+  return updatedTask;
 }
 
 export async function remove(taskId: number, userId: number) {
   const removedTask = await taskRepository.remove(taskId, userId)
   if (!removedTask) throw notFoundError('Task could not be found')
-  return removedTask
+  return removedTask;
 }
 
 const taskService = {
