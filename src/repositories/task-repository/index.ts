@@ -22,7 +22,10 @@ async function getById(taskId: number, userId: number): Promise<Task | null> {
   })
 }
 
-async function getMany(userId: number, filter?: string | undefined): Promise<Task[]> {
+async function getMany(
+  userId: number,
+  filter?: string | undefined,
+): Promise<Task[]> {
   return await prisma.task.findMany({
     where: {
       userId,
@@ -32,7 +35,11 @@ async function getMany(userId: number, filter?: string | undefined): Promise<Tas
   })
 }
 
-async function update(taskId: number, taskBody: TaskUpdate, userId: number): Promise<Task> {
+async function update(
+  taskId: number,
+  taskBody: TaskUpdate,
+  userId: number,
+): Promise<Task> {
   return await prisma.task.update({
     data: taskBody,
     where: {
@@ -49,7 +56,6 @@ async function remove(taskId: number, userId: number) {
       userId,
     },
   })
-  
 }
 
 const taskRepository = {

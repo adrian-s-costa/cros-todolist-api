@@ -18,15 +18,3 @@ export async function usersPost(req: Request, res: Response) {
     return res.status(httpStatus.BAD_REQUEST).send(error)
   }
 }
-
-export async function usersGet(req: Request, res: Response) {
-  try {
-    const users = await userService.getUsers()
-    return res.status(httpStatus.OK).json(users)
-  } catch (error: any) {
-    if (error.name === 'DuplicatedEmailError') {
-      return res.status(httpStatus.CONFLICT).send(error)
-    }
-    return res.status(httpStatus.BAD_REQUEST).send(error)
-  }
-}

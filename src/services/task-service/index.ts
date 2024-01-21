@@ -27,6 +27,7 @@ export async function getById(
 export async function update(taskId: number, userId: number, task: TaskUpdate) {
   const updatedTask = await taskRepository.update(taskId, task, userId)
   if (!updatedTask) throw notFoundError('Task could not be found')
+  return updatedTask
 }
 
 export async function remove(taskId: number, userId: number) {

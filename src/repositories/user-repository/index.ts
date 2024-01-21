@@ -5,12 +5,6 @@ async function create(userData: any) {
   try {
     const { name, email, password } = userData
 
-    if (!name || !email || !password) {
-      throw new Error(
-        'Todos os campos (name, email, password) são obrigatórios.',
-      )
-    }
-
     const createdUser = await prisma.user.create({
       data: {
         name,
@@ -21,7 +15,6 @@ async function create(userData: any) {
 
     return createdUser
   } catch (error) {
-    console.error('Erro ao criar usuário:', error)
     throw new Error('Erro ao criar usuário. Verifique os dados fornecidos.')
   }
 }
@@ -39,8 +32,6 @@ async function findByEmail(email: string, select?: Prisma.UserSelect) {
 
   return await prisma.user.findUnique(params)
 }
-
-// async function findById()
 
 async function retrieve() {
   return await prisma.user.findMany()

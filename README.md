@@ -1,13 +1,16 @@
 # Descrição - Cros-TodoList-API
+
 Este repositório contém a API de cadastro de afazeres e de usuários desenvolvida para o teste técnico da empresa CroSoften.
 
 ## Funcionalidades
+
 - Adicionar, atualizar, remover e carregar os afazeres 📝
 - Cadastro e login de usuários
 - Autenticação utilizando JSON Web Token (JWT)
 - Armazenamento de dados no banco de dados PostgreSQL
 
 ## Tecnologias Utilizadas
+
 - Framework: Express
 - Biblioteca de validação: JSON Web Token (JWT)
 - Banco de Dados: PostgreSQL
@@ -16,6 +19,7 @@ Este repositório contém a API de cadastro de afazeres e de usuários desenvolv
 - Biblioteca Joi para validação de inputs
 
 ## Documentação
+
 [Swagger Documentação](https://app.swaggerhub.com/apis/pinkglb/Cros-TodoList-API/1.0.0)
 
 ## Escolhas técnicas relevantes
@@ -27,30 +31,41 @@ Este repositório contém a API de cadastro de afazeres e de usuários desenvolv
 - Tinha intenção de fazer testes com Jest mas também não consegui implementar dentro do prazo.
 
 ## Rodando localmente
+
 1. Clone o repositório
+
 ```bash
 ~$ git clone https://github.com/adrian-s-costa/cros-todolist-api.git
 ```
+
 2. Dentro do diretório onde o repositório foi clonado, instale as dependências
+
 ```bash
 ~$ npm i
 ```
+
 3. Crie um aquivo `.env` na raíz do projeto e o configure de acordo com suas particularidades seguindo o padrão do `.env.example` para os nomes das variáveis de ambiente
-   
+
 ```bash
   PORT=porta_em_que_API_vai_rodar
   JWT_SECRET=qualquer_valor_serve
   DATABASE_URL="postgresql://user:password@host:port/dbName"
 ```
+
 4. Execute o comando `npx prisma migrate up` para rodar as migrações do banco
+
 ```bash
 ~$ npx prisma migrate up
 ```
+
 5. Execute o comando `npm run start`
+
 ```bash
 ~$ npm run start
 ```
+
 Pronto! API estará rodando em localmente <br/>
 
 # Licença
+
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.

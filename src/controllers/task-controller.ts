@@ -31,7 +31,10 @@ export async function getTaskById(req: any, res: Response) {
   const { userId } = req
 
   try {
-    const task = await taskService.getById(Number(taskId), Number(userId))
+    const task = await taskService.getById(
+      Number(taskId), 
+      Number(userId)
+    )
     return res.status(httpStatus.OK).json(task)
   } catch (error: any) {
     return res.status(httpStatus.NOT_FOUND).send(error)
